@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    form{
+    margin-top: 40px;
+    border: 2px solid black;  
+    width:430px ;
+    height: 430px;
+    margin-left: 200px;
+    padding: 40px;
+    background-image:url('data:image/jpeg;base64,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') ;
+}  
+div{
+    font-size: 40px;
+    font-weight: 800;
+    margin-left: 190px;
+    
+}
+ 
+form input{
+    padding: 10px;
+    margin: 5px;
+    width: 220px;
+}
+#ch{
+    padding: 10px;
+    margin: 20px;
+    width: 220px;
+}
+button{
+    width: 140px;
+    padding: 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: whitesmoke;
+    color: black ;
+}
+button:hover{
+    background-color:black;
+    color: whitesmoke ;
+}
+
+</style>
+</head>
+<body>
+    <center>
+        <div>REGISTRATION FORM</div>
+        <form>
+            
+            <input type="text" placeholder="Enter Name" id="nam"><br><br>
+            <input type="text" placeholder="Enter Email" id="username"><br><br>
+            <input type="text" placeholder="Enter Mobile" id="mob"><br><br>
+            <input type="text" placeholder="Enter Password" id="pass"><br><br>
+            <input type="text" placeholder="Enter Confirm Password" id="cpass"><br>
+            <select id="ch">
+                <option>Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select><br>
+            <button>Registration</button>
+            <!-- <button onclick="return reg()">Registration</button> -->
+        </form>
+    </center>
+
+</body>
+</html>
+
+
+
+
+<!-- <section class="vh-100 bg-image"
+  style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+              <form>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example1cg">Your Name</label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example3cg">Your Email</label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example4cg">Password</label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                </div>
+
+                <div class="form-check d-flex justify-content-center mb-5">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                  <label class="form-check-label" for="form2Example3g">
+                    I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                  </label>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button  type="button" data-mdb-button-init
+                    data-mdb-ripple-init class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
+                    class="fw-bold text-body"><u>Login here</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
