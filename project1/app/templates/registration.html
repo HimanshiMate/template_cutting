@@ -50,22 +50,31 @@ button:hover{
 <body>
     <center>
         <div>REGISTRATION FORM</div>
-        <form>
-            
-            <input type="text" placeholder="Enter Name" id="nam"><br><br>
-            <input type="text" placeholder="Enter Email" id="username"><br><br>
-            <input type="text" placeholder="Enter Mobile" id="mob"><br><br>
-            <input type="text" placeholder="Enter Password" id="pass"><br><br>
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <label >username</label>
+            <input type="text" name="name"><br><br>
+            <label >password</label>
+            <input type="pass" name="password"><br><br>
+            <label >Contact</label>
+            <input type="tel" name="contact"><br><br>
+            <!-- <input type="text" placeholder="Enter Password" id="pass"><br><br>
             <input type="text" placeholder="Enter Confirm Password" id="cpass"><br>
             <select id="ch">
                 <option>Gender</option>
                 <option>Male</option>
                 <option>Female</option>
-            </select><br>
-            <button>Registration</button>
+            </select><br> -->
+            <button type="submit">Register</button>
             <!-- <button onclick="return reg()">Registration</button> -->
         </form>
     </center>
+
+    <!-- <form action="" >
+      <input type="text">
+      <button type=""></button>
+      <a href=""></a>
+    </form> -->
 
 </body>
 </html>
