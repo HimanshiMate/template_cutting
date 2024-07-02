@@ -17,3 +17,7 @@ def registerdata(request):
     # return
     print(request.method)
     print(request.POST)
+    name= request.POST.get("name") # name is key here and this will come form registration form 
+    password=request.POST.get("password") 
+    contact=request.POST.get("contact") 
+    print(name,password,contact) #variables are written 
