@@ -1,5 +1,6 @@
 from django.shortcuts import render,render,redirect
 from django.http import HttpResponse, JsonResponse
+from .models import Student
 
 # Create your views here.
 def home(request):
@@ -20,4 +21,8 @@ def registerdata(request):
     name= request.POST.get("name") # name is key here and this will come form registration form 
     password=request.POST.get("password") 
     contact=request.POST.get("contact") 
-    print(name,password,contact) #variables are written 
+    date=request.POST.get("date_of_birth")
+    print(name,password,contact,date) #variables are written 
+
+    Student.objects.create(Name=name, Password=password, Contact=contact , Date=date)
+    print("data save successfully")

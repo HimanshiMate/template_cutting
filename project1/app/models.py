@@ -9,3 +9,4 @@ class Student(models.Model):
     Name= models.CharField(max_length=50)
     Password=models.EmailField()
     Contact=models.IntegerField()
+    Date=models.DateField(null=True)
